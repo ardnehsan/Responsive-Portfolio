@@ -1,6 +1,8 @@
 .container{
-	width: 960px;
-	min-height: calc(150vh + 70px);
+	width: 100%;
+	max-width: 960px;
+	margin:0 auto;
+	clear: both;
 }
 
 header {
@@ -13,7 +15,6 @@ header {
 body{
 	background:url('../images/doodles.png');
 	height:100%;
-
 }
 
 header ul li{
@@ -41,10 +42,11 @@ header h1 {
 	background-color: white;
 	padding: 10px;
 	border: 1px solid grey;
-	width: 550px;
+	width: 500px;
 	float: left;
 	margin-left: 100px;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	margin-bottom: 15%;
 }
 
 
@@ -55,8 +57,14 @@ header h1 {
 	
 }
 
+.about input{
+
+	width: 95%;	
+	
+}
+
 .about img{
-	padding: 20px;
+	padding: 5%;
 	float: left;
 }
 
@@ -76,11 +84,12 @@ header h1 {
 
 h2{
 	text-align: center;
+	width: 100%;
 	font-size: 20px;
 	color: #4AAAA5;
 	font-weight: bolder;
 	border-bottom: 0.5px solid #666666;
-	padding:10px;
+	padding: 10px 0;
 }
 
 
@@ -98,43 +107,215 @@ h2{
 	padding: 15px;
 }
 
-footer{
-	
-	height: 100px;
-	border-top: 6px solid #4AAAA5;
-	background-color: #666666;
+footer {
+ 
+  padding: 30px 0;
+  clear: both;
+  font-size: 12px;
+  color: #fff;
+  color: #ccc;
+  text-align: center;
+  background: #666;
+  border-top: 8px solid #4aaaa5;
 }
 
-footer p{
-color: white;
-margin-left: 430px;
-padding-top: 45px;
-font-size: 10px;
-font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-}
+/*Portfolio*/
 
 .PortPic{
-	width:200px;
-	height:150px;
-	display:inline-block;
-	margin:4px;
+	
+	overflow: auto;
+	margin:20px 0 25px;
 	position: relative;
-	padding:20px;
+	float: left;
+
+}
+
+.PortPic:nth-child(even){
+	margin-right: 40px;
 }
 
 .PortPic img{
 	width:100%;
-	height:100%;
+	border: 0 none;
+	opacity: 0.8;
 }
 
-.PortPic :not(img){
+.PortPic h2{
 	position: absolute;
-	top:70%;
-	z-index: 1;
-	color:white;
-	background-color: #4AAAA5;
+	bottom: 20px;
+	color: white;
+	background: #4AAAA5;
+	padding: 15px;
 	text-align: center;
-	width: 75%;
-	margin-left: 20px;
+	width: 100%;
+	border-bottom: 0;
 	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+/*Media Query section*/
+
+/*MAX WIDTH @ 980px*/
+
+@media screen and (max-width: 980px)
+{
+	/*index.html*/
+	header{
+		width: 100%;
+	}
+
+	header ul{
+	padding-right: 10%;
+	}
+
+
+	.container{
+		width: 100%;
+	}
+
+	.about{
+		text-align: center;
+		width: 400px;
+	}
+
+	.about img{
+		padding: 5%;
+		width:90%;
+		height: auto;	
+		
+	}
+	
+	#contact-info{
+		width: 30%;
+		padding: 0;
+		
+	}
+
+
+	/*portfolio.html*/
+
+	.portpic{
+		width: 100%;
+	}
+}
+
+
+/*MAX WIDTH @ 768px*/
+
+@media screen and (max-width: 768px)
+{
+	/*index.html*/
+	header{
+		width: 100%;
+	}
+
+	header ul{
+	padding-right: 10%;
+	}
+
+
+	.container{
+		width: 100%;
+	}
+
+	.about{
+		margin:5%;
+		text-align: center;
+		width: 600px;
+	}
+
+	.about img{
+
+		padding: 5%;
+		width:30%;
+		height: auto;	
+		
+	}
+	
+	#contact-info{
+
+		width: 80%;
+		margin: 10%;
+
+	}
+
+	#contact-info img{
+		padding-left: 100px;
+	}
+
+	/*portfolio.html*/
+
+	.portpic{
+		padding-left: 4%;
+		width: 40%;
+	}
+
+	.portpic img{
+		width: 100%;
+		float: left;
+	}
+}
+
+/*MAX WIDTH @ 640px*/
+
+@media screen and (max-width:640px)
+{
+	/*index.html*/
+	header{
+		width: 100%;
+	}
+
+	header h1{
+
+		margin: 0;
+		width: 100%;
+		padding: 5% 0;
+
+	}
+
+	header ul li{
+
+		padding: 10%;
+	}
+
+
+	.container{
+		width: 100%;
+	}
+
+	.about{
+		margin:0 5%;
+		text-align: center;
+		width: 500px;
+	}
+
+	.about img{
+
+		padding: 5%;
+		width:30%;
+		height: auto;	
+		
+	}
+	
+	#contact-info{
+
+		width: 500px;
+		margin-right: 80px;
+	}
+
+	#contact-info img{
+		padding:3%;
+	}
+
+	/*portfolio.html*/
+
+	.portpic{
+		padding-left: 5;
+
+		width: 95%;
+	}
+
+	.portpic img{
+		width: 100%;
+		float: left;
+	}
 }
